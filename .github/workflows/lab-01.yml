@@ -1,0 +1,36 @@
+
+name: "Lab 01 - DevOps CI/CD"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "Bài 1/configs/**"
+      - ".github/workflows/lab-01.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Validate HTML
+        run: |
+          echo "Checking Lab 01..."
+          test -f "Bài 1/configs/index.html"
+          echo "HTML file found!"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: "./Bài 1/configs"
+          publish_branch: gh-pages
+          exclude_assets: deploy.yml
