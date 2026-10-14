@@ -26,3 +26,18 @@ flowchart TD
 ```
 
 **Kết quả:** Sau khi commit thay đổi code lên nhánh `main`, GitHub Actions tự động kiểm tra và triển khai website lên GitHub Pages.
+
+
+## 4.3. Trả lời câu hỏi
+
+### Câu 1: DevOps workflow tự động hóa những bước nào mà cách thủ công phải làm bằng tay?
+
+GitHub Actions tự động lấy mã nguồn, kiểm tra file HTML và triển khai website lên GitHub Pages sau khi code được push lên nhánh `main`. Nhờ đó không cần upload website thủ công mỗi lần cập nhật.
+
+### Câu 2: Nếu deploy sai (website bị lỗi), làm sao để quay lại phiên bản cũ?
+
+Sử dụng `git revert <commit-id>` để hoàn tác commit gây lỗi, sau đó push lên nhánh `main`. GitHub Actions sẽ tự động chạy lại và triển khai phiên bản đã được khôi phục.
+
+### Câu 3: GitHub Actions pipeline đã giúp tiết kiệm bao nhiêu thời gian so với cách thủ công?
+
+Theo ước tính trong bài Lab, triển khai thủ công mất khoảng 15–30 phút. Trong lần thực hành, GitHub Actions chạy 10 giây và GitHub Pages mất 32 giây, tổng khoảng 42 giây. Như vậy, quy trình tự động giúp tiết kiệm khoảng 14–29 phút cho mỗi lần triển khai.
