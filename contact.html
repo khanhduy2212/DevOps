@@ -1,1 +1,198 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - DevOps Lab 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            background: #f1f3ff;
+            border-radius: 8px;
+            padding: 10px 16px;
+            font-weight: 600;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: white;
+            background: #667eea;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #667eea;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: #764ba2;
+            margin-bottom: 24px;
+        }
+
+        .contact-card {
+            background: #f8f9fa;
+            padding: 24px;
+            border-radius: 10px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .contact-card h2 {
+            font-size: 19px;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .contact-card p {
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .contact-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            color: #888;
+            font-size: 13px;
+            margin-top: 24px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px 18px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+
+        <nav aria-label="Điều hướng chính">
+            <a href="index.html">Trang chủ</a>
+            <a href="about.html">Giới thiệu</a>
+            <a href="contact.html" class="active"
+               aria-current="page">Liên hệ</a>
+        </nav>
+
+        <img src="avatar.jpg"
+             alt="Ảnh đại diện sinh viên"
+             class="avatar">
+
+        <h1>📬 Liên hệ với mình</h1>
+        <p class="subtitle">DevOps Lab 1 - My Portfolio</p>
+
+        <section class="contact-card">
+            <h2>Thông tin liên hệ</h2>
+
+            <p>
+                👤 <strong>Họ tên:</strong>
+                Vi Khánh Duy
+            </p>
+
+            <p>
+                🎓 <strong>Ngành học:</strong>
+                Công nghệ thông tin
+            </p>
+
+            <p>
+                💻 <strong>GitHub:</strong>
+                <a href="https://github.com/khanhduy2212"
+                   target="_blank" rel="noopener noreferrer">
+                    github.com/khanhduy2212
+                </a>
+            </p>
+
+            <p>
+                🚀 <strong>Dự án:</strong>
+                <a href="https://github.com/khanhduy2212/DevOps"
+                   target="_blank" rel="noopener noreferrer">
+                    DevOps Lab Repository
+                </a>
+            </p>
+        </section>
+
+        <a href="index.html" class="button">
+            ← Quay về trang chủ
+        </a>
+
+        <div class="footer">
+            <p>DevOps Lab 1 - GitHub Actions CI/CD</p>
+            <p>© 2026 Vi Khánh Duy</p>
+        </div>
+
+    </main>
+</body>
+</html>
